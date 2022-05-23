@@ -11,16 +11,20 @@
         function Person() {
             this.firstName = ""
             this.lastName = ""
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, My name is ${this.firstName} `)
+            }
         }
 
         const shaufi = new Person()
         shaufi.firstName = "Shaufi"
         shaufi.lastName = "Imanulhaq"
+        shaufi.sayHello("Joko")
 
         const budi = new Person()
         budi.firstName = "Budi"
         budi.lastName = "Nugraha"
-
+        budi.sayHello("Joko")
 
         console.log(shaufi)
         console.log(budi)
