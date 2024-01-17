@@ -33,9 +33,13 @@
             console.info(MathUtil.sum())
             console.info("Shaufi")
         } catch(error) {
-            console.info(`Terjadi error di field : ${error.field} dengan error ${error.message} `)
+            if (error instanceof ValidationError) {
+                console.info(`an error occurred in field: ${error.field} with error ${error.message} `)
+            } else {
+                console.info(`an error occurred: ${error.message}`)
+            }
         } finally {
-            console.info("Program selesai")
+            console.info("Program is complete")
         }
 
         console.info("Imanulhaq")
